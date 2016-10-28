@@ -1,0 +1,1 @@
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -file mapper_hbase_single_put.py -mapper mapper_hbase_single_put.py -input wasb://data-newprolab-com@s3aws.blob.core.windows.net/facetz_2015_02_09/ -output /user/sergey.chekanskiy/results

@@ -1,0 +1,4 @@
+input.txt | sort -k 1,1  | uniq | wc -l > output.txt
+cat input.txt | python mapper.py| sort -k1,1 | python reducer.py > output.txt
+
+sergey.chekanskiy@azure-cluster.newprolab.com

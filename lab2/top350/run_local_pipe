@@ -1,0 +1,1 @@
+head -n 1000 part-00000 | python mapper.py | sort -k2,2n | python reducer.py | sort -rn -k2,2 | python 350_map.py | sort -k2,2n | python 350_reduce.py | sort -rn -k2,2 | head

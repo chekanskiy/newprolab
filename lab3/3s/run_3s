@@ -1,0 +1,1 @@
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -file lab03_users.txt -file mapper_l3s.py -mapper mapper_l3s.py -file reducer_l3s.py -reducer reducer_l3s.py -input wasb://data-newprolab-com@s3aws.blob.core.windows.net/lab03data/ -output /user/sergey.chekanskiy/results_lab3_s

@@ -1,0 +1,1 @@
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -file mapper_hbase_single_put.py -mapper mapper_hbase_single_put.py -input /user/sergey.chekanskiy/lab2_data -output /user/sergey.chekanskiy/results_local

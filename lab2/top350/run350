@@ -1,0 +1,1 @@
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -file 350_map.py -file 350_reduce.py -mapper 350_map.py -reducer 350_reduce.py -input /user/sergey.chekanskiy/results350 -output /user/sergey.chekanskiy/results350_2

@@ -1,0 +1,12 @@
+sudo su hdfs
+wget 'https://s3aws.blob.core.windows.net/public-newprolab-com/numbers.txt.lzma' -O /tmp/numbers.txt.lzma
+lzma -d /tmp/numbers.txt.lzm
+
+hadoop fs -mkdir -p /users/numbers
+hadoop fs -put /tmp/numbers.txt /users/numbers/
+
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -D mapred.reduce.tasks=1 -input /users/numbers -output /users/numbers/result -mapper "cat" -reducer "uniq -c"
+hadoop fs -cat /users/numbers/result/* | sort | tail
+
+Если вы совершили ошибку в последнем задании, то можете стереть данные из HDFS	и начать все сначала при помощи команды
+hadoop fs -rm -r -f /users/ && hadoop fs -mkdir -p /users/numbers

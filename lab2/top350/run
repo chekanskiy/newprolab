@@ -1,0 +1,1 @@
+hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-streaming.jar -file mapper.py -file reducer.py -mapper mapper.py -reducer reducer.py -input wasb://data-newprolab-com@s3aws.blob.core.windows.net/facetz_2015_02_12/ -output /user/sergey.chekanskiy/results350
