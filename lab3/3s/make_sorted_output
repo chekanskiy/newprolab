@@ -1,0 +1,3 @@
+#!/bin/bash
+cat lab3_super_out | sort -k2,2r -k1,1 | head -n200 >  ~/lab03s_domains.txt
+
