@@ -1,5 +1,6 @@
 .idea/
 .ipynb_checkpoints
+*.pckl
 __init__.py
 ssh
 sergey.chekanskiy
